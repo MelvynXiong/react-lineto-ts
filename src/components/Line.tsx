@@ -1,8 +1,6 @@
-import React, { PureComponent, ReactNode } from 'react';
-import { BaseProps, LineCoordinates } from '../interface';
+import React, { PureComponent } from 'react';
+import { LineProps } from '../interface';
 import { DEFAULT_BORDER_COLOR, DEFAULT_BORDER_STYLE, DEFAULT_BORDER_WIDTH } from '../cons';
-
-interface LineProps extends BaseProps, LineCoordinates {}
 
 export default class Line extends PureComponent<LineProps> {
   private within: any;
