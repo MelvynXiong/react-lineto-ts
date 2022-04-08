@@ -93,7 +93,7 @@ export default function HoverTest() {
           to={to}
           fromAnchor="middle right"
           toAnchor="middle left"
-          borderWidth={3}
+          borderWidth={2}
         />
       ) : null}
     </fieldset>

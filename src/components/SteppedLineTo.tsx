@@ -1,8 +1,16 @@
-import { LineTo, SteppedLine } from '..';
+import React from 'react';
+import { SteppedLineToProps } from '../interface';
+import { SteppedLine } from '..';
+import usePoints from './usePoints';
 
-export default class SteppedLineTo extends LineTo {
-  render() {
-    const points = this.detect();
-    return points ? <SteppedLine {...points} {...this.props} /> : null;
-  }
+export default function SteppedLineTo({
+  from,
+  to,
+  fromAnchor,
+  toAnchor,
+  ...rest
+}: SteppedLineToProps) {
+  const [isActive, points] = usePoints({ from, to, fromAnchor, toAnchor });
+
+  return isActive ? <SteppedLine {...points} {...rest} /> : null;
 }

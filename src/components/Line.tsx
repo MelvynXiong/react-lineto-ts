@@ -18,22 +18,24 @@ export default function Line({
 
   const angle = (Math.atan2(dy, dx) * 180) / Math.PI;
   const length = Math.sqrt(dx * dx + dy * dy);
+  const defaultStyle = {
+    borderTopColor: borderColor || DEFAULT_BORDER_COLOR,
+    borderTopStyle: borderStyle || DEFAULT_BORDER_STYLE,
+    borderTopWidth: borderWidth || DEFAULT_BORDER_WIDTH,
+  };
 
+  const offsetX = (defaultStyle.borderTopWidth / 2) * (dy / length);
+  const offsetY = (defaultStyle.borderTopWidth / 2) * (dx / length);
+  console.log(1, angle, offsetX);
   const positionStyle = {
     position: 'absolute',
-    top: `${y0}px`,
-    left: `${x0}px`,
+    top: `${y0 - offsetY}px`,
+    left: `${x0 + offsetX}px`,
     width: `${length}px`,
     zIndex: Number.isFinite(zIndex) ? String(zIndex) : '1',
     transform: `rotate(${angle}deg)`,
     // Rotate around (x0, y0)
     transformOrigin: '0 0',
-  };
-
-  const defaultStyle = {
-    borderTopColor: borderColor || DEFAULT_BORDER_COLOR,
-    borderTopStyle: borderStyle || DEFAULT_BORDER_STYLE,
-    borderTopWidth: borderWidth || DEFAULT_BORDER_WIDTH,
   };
 
   return <div className={className} style={{ ...defaultStyle, ...positionStyle } as any} />;

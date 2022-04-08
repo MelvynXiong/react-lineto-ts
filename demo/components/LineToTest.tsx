@@ -33,8 +33,8 @@ export default function LineToTest() {
             fromAnchor="middle right"
             toAnchor="middle left"
             borderColor="#0f0"
-            borderStyle="dotted"
-            borderWidth={4}
+            borderStyle="solid"
+            borderWidth={2}
           />
         </>
       ) : null}

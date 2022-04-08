@@ -9,10 +9,10 @@ function App() {
   return (
     <div className="App">
       <PolygonTest />
-      {/* <SteppedTest /> */}
       <HoverTest />
       <LineToTest />
-      {/* <TreeTest /> */}
+      <SteppedTest />
+      {/* <TreeTest />  */}
     </div>
   );
 }
