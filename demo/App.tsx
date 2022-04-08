@@ -4,6 +4,7 @@ import SteppedTest from './components/SteppedTest';
 import HoverTest from './components/HoverTest';
 import LineToTest from './components/LineToTest';
 import TreeTest from './components/TreeTest';
+import SteppedLineToTest from './components/SteppedLineToTest';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       <HoverTest />
       <LineToTest />
       <SteppedTest />
-      {/* <TreeTest />  */}
+      <TreeTest /> 
+      <SteppedLineToTest />
     </div>
   );
 }

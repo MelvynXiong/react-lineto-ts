@@ -6,7 +6,7 @@ export default function SteppedTest() {
   const style = {
     borderColor: '#ddd',
     borderStyle: 'solid',
-    borderWidth: 1,
+    borderWidth: 2,
   };
 
   return (

@@ -28,9 +28,8 @@ export default function SteppedLine({
     const newBorderWidth = borderWidth || DEFAULT_BORDER_WIDTH;
     const y2 = Math.round((newY0 + newY1) / 2);
 
-    const xOffset = dx > 0 ? newBorderWidth : 0;
-    const minX = Math.min(newX0, newX1) - xOffset;
-    const maxX = Math.max(newX0, newX1);
+    const minX = Math.min(newX0, newX1) - newBorderWidth / 2;
+    const maxX = Math.max(newX0, newX1) + newBorderWidth / 2;
 
     return (
       <>
@@ -43,18 +42,18 @@ export default function SteppedLine({
 
   function renderHorizontal() {
     const dy = newY1 - newY0;
+
     if (Math.abs(dy) <= 1) {
       return (
-        <Line {...rest} x0={newX0} y0={newY0} x1={newX0} y1={newY0} borderWidth={borderWidth} />
+        <Line {...rest} x0={newX0} y0={newY0} x1={newX1} y1={newY0} borderWidth={borderWidth} />
       );
     }
 
     const newBorderWidth = borderWidth || DEFAULT_BORDER_WIDTH;
     const x2 = Math.round((newX0 + newX1) / 2);
 
-    const yOffset = dy < 0 ? newBorderWidth : 0;
-    const minY = Math.min(newY0, newY1) - yOffset;
-    const maxY = Math.max(newY0, newY1);
+    const minY = Math.min(newY0, newY1) - newBorderWidth / 2;
+    const maxY = Math.max(newY0, newY1) + newBorderWidth / 2;
 
     return (
       <>

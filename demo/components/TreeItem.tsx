@@ -14,7 +14,7 @@ export default class TreeItem extends Component<Props> {
       delay: true,
       borderColor: '#ddd',
       borderStyle: 'solid',
-      borderWidth: 3,
+      borderWidth: 2,
     };
     const h = { _: 20, A: 120, B: 100, C: 200, D: 50 }[this.props.name[0] || '_'];
     const l = Math.ceil(((this.props.index + 2) / 20) * 100) + 10 * (this.props.depth + 1);

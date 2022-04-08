@@ -26,7 +26,7 @@ export default function Line({
 
   const offsetX = (defaultStyle.borderTopWidth / 2) * (dy / length);
   const offsetY = (defaultStyle.borderTopWidth / 2) * (dx / length);
-  console.log(1, angle, offsetX);
+
   const positionStyle = {
     position: 'absolute',
     top: `${y0 - offsetY}px`,

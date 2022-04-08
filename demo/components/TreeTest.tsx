@@ -5,7 +5,7 @@ export default class TreeTest extends Component {
   render() {
     return (
       <fieldset id="tree-test">
-        <legend>Tree Test</legend>
+        <div>Tree Test</div>
         <div className="tree-test-wrap">
           <TreeItem name="" depth={0} index={0} />
         </div>
