@@ -1,10 +1,31 @@
 {
   "name": "react-lineto-ts",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "author": "Melvyn Xiong <xmh9368@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/react-lineto-ts.umd.js",
+  "module": "./dist.react-lineto-ts.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/react-lineto-ts.es.js",
+      "require": "./dist/react-lineto-ts.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
+  },
+  "homepage": "https://github.com/MelvynXiong/react-lineto-ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MelvynXiong/react-lineto-tst"
+  },
+  "bugs": {
+    "url": "https://github.com/MelvynXiong/react-lineto-ts/issues"
   },
   "peerDependencies": {
     "react": "^16.8.6",
