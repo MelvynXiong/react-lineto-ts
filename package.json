@@ -1,6 +1,6 @@
 {
   "name": "react-lineto-ts",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "author": "Melvyn Xiong <xmh9368@gmail.com>",
   "license": "MIT",
   "files": [
@@ -18,6 +18,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build-wp": "webpack",
     "preview": "vite preview"
   },
   "homepage": "https://github.com/MelvynXiong/react-lineto-ts",
@@ -33,13 +34,18 @@
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
     "@types/node": "^17.0.23",
     "@types/react": "^17.0.43",
     "@types/react-dom": "^17.0.14",
     "@vitejs/plugin-react": "^1.3.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "ts-loader": "^9.2.8",
     "typescript": "^4.6.3",
-    "vite": "^2.9.1"
+    "vite": "^2.9.1",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
   }
 }
